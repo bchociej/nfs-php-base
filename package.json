@@ -1,0 +1,16 @@
+{
+  "name": "your-project",
+  "version": "0.0.1-SNAPSHOT",
+  "description": "something something something",
+  "author": "Ben Chociej <ben@chociej.io>",
+  "license": "n/a",
+  "private": true,
+  "devDependencies": {
+    "bower": "^1.3.12",
+    "gulp": "^3.8.10",
+    "gulp-minify-css": "^0.3.11",
+    "gulp-shell": "^0.2.11",
+    "gulp-stylus": "^1.3.4",
+    "kouto-swiss": "^0.11.6"
+  }
+}
