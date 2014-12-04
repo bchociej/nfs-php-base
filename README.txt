@@ -5,9 +5,9 @@ hosts.
 + Gulp to compile/watch/kick off the dev server (serve.sh)
 + Helper script (sync.sh) to rsync the app to a production server
 
-App contents go in ./app/. Stylus and CSS in ./style/ will get compiled and
-minified into ./css/; likewise coffeescript and JS from ./script/ into ./js/.
-Happy coding.
+App contents go in ./app/. Stylus and CSS in ./app/style/ will get compiled and
+minified into ./app/css/; likewise coffeescript and JS from ./app/script/ into
+./app/js/. Happy coding.
 
 
 QUICKSTART
