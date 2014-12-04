@@ -12,7 +12,7 @@ if [[ ! -x node_modules/.bin/npm-which ]] ; then
 
 	echo "looks like you need to run npm install. i'll take care of it."
 
-	npm install
+	"$(which npm)" install
 
 	if [[ ! -x node_modules/.bin/npm-which ]] ; then
 		echo "npm install didn't setup node_modules/.bin correctly." >&2
@@ -21,23 +21,25 @@ if [[ ! -x node_modules/.bin/npm-which ]] ; then
 	fi
 fi
 
-BOWER="$(node_modules/.bin/npm-which bower 2>&1)"
+GULP="$(node_modules/.bin/npm-which gulp 2>&1)"
 
-if [[ "${BOWER}" == "bower not found" ]] ; then
+if [[ "${GULP}" == "gulp not found" ]] ; then
 	if [[ -x "$(which npm)" ]] ; then
-		echo "no bower found, installing..." >&2
-		"$(which npm)" install bower
+		echo "no gulp found, installing..." >&2
+		"$(which npm)" install gulp
 	fi
 
-	BOWER="$(node_modules/.bin/npm-which bower 2>&1)"
+	GULP="$(node_modules/.bin/npm-which gulp 2>&1)"
 
-	if [[ "${BOWER}" == "bower not found" ]] ; then
-		echo "still no bower found, exiting" >&2
+	if [[ "${GULP}" == "gulp not found" ]] ; then
+		echo "still no gulp found, exiting" >&2
+
 		popd >/dev/null 2>&1
+
 		exit 2
 	fi
 fi
 
-${BOWER} $@
+${GULP} $@
 
 popd >/dev/null 2>&1
