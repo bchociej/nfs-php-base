@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./upload.conf
-DIR="$(dirname "${BASH_SOURCE[0]}")"
+DIR="$(dirname "${BASH_SOURCE[0]}")"/app/
 BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 
 die() { echo "$@" 1>&2 ; exit 1; }
