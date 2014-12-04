@@ -9,4 +9,22 @@ App contents go in ./app/. Stylus and CSS in ./style/ will get compiled and
 minified into ./css/; likewise coffeescript and JS from ./script/ into ./js/.
 Happy coding.
 
+
+QUICKSTART
+
+Initial Setup
+	$ npm install
+
+Start dev server (compile & watch stylus and coffeescript)
+	$ gulp
+
+Custom port
+	$ PORT=1234 gulp
+
+Sync project to production server
+	$ vim upload.conf
+	... edit rsync remote appropriately ...
+	$ ./sync.sh
+
+
 (coffeescript is currently TODO)
